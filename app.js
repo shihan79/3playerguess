@@ -8,6 +8,7 @@ let player3input = document.querySelector('.player3input')
 let player3button = document.querySelector('.player3button')
 let error3 = document.querySelector('.error3')
 let chance = document.querySelector('.chance')
+let chance2 = document.querySelector('.chance2')
 let player2 = document.querySelector('.player2')
 let player3 = document.querySelector('.player3')
 let count = 5
@@ -64,7 +65,7 @@ player2button.addEventListener('click',function(){
               player2button.style.display = 'none'
               error2.style.display = 'none'
               player3.style.display = "block"
-           chance.style.display ='block'
+           chance2.style.display ='block'
            player3input.style.display = 'inline-block'
               player3button.style.display = 'inline-block'
               error3.style.display = 'inline-block'
@@ -81,7 +82,7 @@ if(count==0){
     player2button.style.display = 'none'
     error2.style.display = 'none'
     player3.style.display = "block"
-    chance.style.display ='block'
+    chance2.style.display ='block'
     player3input.style.display = 'inline-block'
        player3button.style.display = 'inline-block'
        error3.style.display = 'inline-block'
@@ -110,11 +111,11 @@ player3button.addEventListener('click',function(){
 
     console.log(player3input.value)
     
-    chance.innerHTML = `chance : ${count2}`
+    chance2.innerHTML = `chance : ${count2}`
     // game won for player3
     if(player1input.value == player3input.value){
            player3.innerHTML = "player3 win"
-           chance.style.display ='none'
+           chance2.style.display ='none'
            player3input.style.display = 'none'
               player3button.style.display = 'none'
               error3.style.display = 'none'
@@ -126,13 +127,13 @@ else{
         // no count left 
 if(count2==0){
     player3.innerHTML = 'player1 win'
-    chance.style.display ='none'
+    chance2.style.display ='none'
     player3input.style.display = 'none'
     player3button.style.display = 'none'
     error3.style.display = 'none'
     //still  count left
 }else{
-    chance.innerHTML = `chance : ${count2}`
+    chance2.innerHTML = `chance : ${count2}`
 }    
    
 }
